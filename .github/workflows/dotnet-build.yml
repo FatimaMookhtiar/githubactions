@@ -37,11 +37,6 @@ jobs:
     - name: Publish
       run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
   
-  deploy:
-
-    runs-on: ubuntu-latest
-
-    steps:
     - name: Azure WebApp deployment
       uses: Azure/webapps-deploy@v2
       with:
